@@ -41,7 +41,9 @@ main .content {
     color: white;
     font-weight: 600;
 }
-
+.content section {
+    padding: 20px 0;
+}
 @media screen and (min-width:992px) {
     main aside {
         width: 150px;
