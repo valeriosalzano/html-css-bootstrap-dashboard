@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
@@ -14,7 +14,7 @@
     
 <body>
     <!-- header -->
-    <header>
+    <header class="position-fixed top-0 start-0 w-100 main-header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><img src="#" alt="logo image"/><img class="d-none d-lg-inline-block" src="#" alt="logo image2"></a>
@@ -36,10 +36,10 @@
                     <a class="nav-link" href="#">icon</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       bellIcon
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu position-absolute transl">
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -50,6 +50,78 @@
             </div>
           </nav>
     </header>
+    <!-- header end -->
+
+    <!-- main -->
+    <main class="d-flex">
+        <!-- side navbar -->
+        <aside class="d-flex flex-column justify-content-between">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#">icon <span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#">icon <span>Stats</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-light" href="#">icon <span>Signals</span></a>
+                </li>
+            </ul>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="#">icon <span>Admin</span></a>
+                </li> 
+            </div>  
+        </aside>
+
+        <div class="content">
+            <header class="py-3">
+                <div class="container-fluid">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col order-md-3 col-lg-2">
+                            <span>Nuovo Studente</span>
+                            <button class="btn text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus-square"></i></button>
+
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                mettere il form qui!
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col flex-lg-grow-1 col-lg-7">
+                            <h1 class="d-inline-block">Boolean</h1> <span class="badge rounded-pill">Piano blaze</span>
+                            <nav style="--bs-breadcrumb-divider: '>>'; --bs-breadcrumb-divider-color: var(--bs-white)" aria-label="breadcrumb" class="text-white">
+                                <ol class="breadcrumb flex-nowrap">
+                                    <li class="breadcrumb-item">
+                                        <span class="badge rounded-pill">3 app</span>
+                                    </li>
+                                    <li class="breadcrumb-item" aria-current="page">
+                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile app</span>
+                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean web app</span>
+                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean blog app</span>
+                                        <span class="badge rounded-pill d-lg-none">+</span>
+                                    </li>
+                                </ol>
+                              </nav>
+                        </div>
+                        <div class="col col-lg-3">
+                            <p>
+                                Studenti online negli ultimi 30 minuti
+                            </p>
+                            <span class="counter">
+                                125
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
