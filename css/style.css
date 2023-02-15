@@ -44,6 +44,28 @@ main .content {
 .content section {
     padding: 20px 0;
 }
+#next-class table tr>:first-child {
+    text-align: left;
+}
+.fifth.col {
+    width: 100px
+}
+
+@media screen and (max-width: 575px) {
+    #next-class table tr>:nth-child(2) {
+        display: none;
+    }
+    #next-class table tr>:nth-child(3) {
+        display: none;
+    }
+}
+@media screen and (min-width: 576px) {
+    #next-class .first-col {
+        width: 30%;
+
+    }
+}
+
 @media screen and (min-width:992px) {
     main aside {
         width: 150px;
@@ -51,4 +73,9 @@ main .content {
     main .content {
         width: calc(100% - 150px);
     }
+    #next-class .first-col{
+        width: 50%;
+    }
+    
 }
+
