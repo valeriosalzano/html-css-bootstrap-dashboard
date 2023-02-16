@@ -10,6 +10,7 @@
 
     --custom-text-white: white;
     --custom-text-gray: #888;
+
 }
 
 body > header {
@@ -37,7 +38,6 @@ main aside .nav-link:hover {
 
 main .content {
     width: calc(100% - 70px);
-    background-color: ;
 }
 
 .content header .badge {
@@ -55,12 +55,19 @@ main .content {
     color: var(--custom-text-white);
     font-weight: 600;
 }
+.new-student.offcanvas {
+    width: 100%;
+}
 
 .content section {
-    padding: 20px 0;
+    margin: 1rem 0;
 }
+
 #next-class tr >:first-child {
     text-align: left;
+}
+.first.col {
+    min-width: 80px;
 }
 #next-class tr td:first-child::before {
     display: inline-block;
@@ -77,10 +84,20 @@ main .content {
     font-weight: 500;
     font-size: 1.1rem;
 }
+.second.col {
+    width: 150px;
+}
+.third.col {
+    width: 80px;
+}
+.fourth.col {
+    width: 80px;
+}
 .fifth.col {
-    width: 100px
+    width: 100px;
 }
 
+/* only sm  */
 @media screen and (max-width: 575px) {
     #next-class table tr>:nth-child(2) {
         display: none;
@@ -89,6 +106,8 @@ main .content {
         display: none;
     }
 }
+
+/* md breakpoint */
 @media screen and (min-width: 576px) {
     #next-class .first-col {
         width: 30%;
@@ -96,6 +115,7 @@ main .content {
     }
 }
 
+/* lg breakpoint */
 @media screen and (min-width:992px) {
     main aside {
         width: 150px;
@@ -104,6 +124,9 @@ main .content {
         width: calc(100% - 150px);
     }
     #next-class .first-col{
+        width: 50%;
+    }
+    .new-student.offcanvas {
         width: 50%;
     }
     
