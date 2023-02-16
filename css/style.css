@@ -3,17 +3,20 @@
     --custom-dark : #001533;
     --custom-blue : #1B72E8;
     --custom-dark-blue : #165BBA;
+    --custom-darker-blue : #0d3469;
+    --custom-black-layer-20 : rgba(0,0,0,0.2);
+    --custom-black-layer-40 : rgba(0,0,0,0.5);
+    --custom-white-layer-20 : rgba(255,255,255,0.2);
 
     --custom-text-white: white;
+    --custom-text-gray: #888;
 }
 
-.main-header {
+body > header {
     height: 70px;
 }
-
-/* dropdown menu right overflow fix  */
-.main-header nav .dropdown-menu {
-    transform: translate(-120px,0);
+header .form-control::placeholder {
+    color: var(--custom-text-gray);
 }
 
 main {
@@ -22,30 +25,57 @@ main {
 }
 
 main aside {
+    background-image: url("../img/sidebar-bg.png");
+    background-size: cover;
     width: 70px;
     background-color: var(--custom-dark);
 }
 
-main .content {
-    width: calc(100% - 70px);
+main aside .nav-link:hover {
+    background-color: var(--custom-white-layer-20);
 }
 
-.content header {
-    background-color: var(--custom-blue);
-    color: var(--custom-text-white);
+main .content {
+    width: calc(100% - 70px);
+    background-color: ;
 }
+
 .content header .badge {
-    background-color: var(--custom-dark-blue);
+    text-decoration: none;
+    background-color: var(--custom-black-layer-20);
+}
+.content header .badge:hover {
+    background-color: var(--custom-black-layer-40);
+}
+
+.content .custom_breadcrumb a:hover{
+    text-decoration: none;
 }
 .content .breadcrumb-item::before {
-    color: white;
+    color: var(--custom-text-white);
     font-weight: 600;
 }
+
 .content section {
     padding: 20px 0;
 }
-#next-class table tr>:first-child {
+#next-class tr >:first-child {
     text-align: left;
+}
+#next-class tr td:first-child::before {
+    display: inline-block;
+    content: '';
+    background-image: url(../img/class-avatar.jpg);
+    background-size: contain;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+#next-class th.col {
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 .fifth.col {
     width: 100px

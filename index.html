@@ -15,34 +15,39 @@
 <body>
     <!-- header -->
     <header class="position-fixed top-0 start-0 w-100 main-header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="d-lg-none" src="#" alt="logo image"/><img class="d-none d-lg-inline-block" src="#" alt="logo image2"></a>
+        <nav class="navbar navbar-expand-lg h-100">
+            <div class="container-fluid h-100 flex-nowrap">
+              <a class="navbar-brand d-inline-block h-100" href="#">
+                <div class="custom-img-container h-100">
+                  <img class="h-100 d-lg-none bg-secondary" src="img/mobile-logo.png" alt="logo mobile"/>
+                  <img class="h-100 py-2 d-none d-lg-inline-block" src="img/logo.svg" alt="logo desktop"/>
+                </div>
+              </a>
               <form class="d-flex flex-grow-1" role="search">
                
-                <div class="input-group">
-                    <span class="input-group-text border-end-0" id="basic-addon1">icon</span>
-                    <input class="form-control me-2 border-start-0" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group align-middle flex-nowrap">
+                    <span class="input-group-text border-0 rounded-start-3 bg-secondary-subtle" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    <input class="form-control border-0 rounded-end-3 me-2 bg-secondary-subtle shadow-none" type="search" placeholder="Prova a cercare: lezioni di Laravel" aria-label="Search">
                   </div>              
               </form>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-1">
                   <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link" aria-current="page" href="#">icon</a>
+                    <a class="nav-link" aria-current="page" href="#"><i class="bi bi-list-task"></i></a>
                   </li>
                   <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link" href="#">icon</a>
+                    <a class="nav-link" href="#"><i class="bi bi-question-circle-fill"></i></a>
                   </li>
                   <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link" href="#">icon</a>
+                    <a class="nav-link" href="#"><i class="bi bi-three-dots-vertical"></i></a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      bellIcon
+                      <i class="bi bi-bell-fill text-warning"></i>
                     </a>
-                    <ul class="dropdown-menu position-absolute transl">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -55,64 +60,111 @@
     <!-- main -->
     <main class="d-flex">
         <!-- side navbar -->
-        <aside class="d-flex flex-column justify-content-between">
+        <aside class="d-flex flex-column justify-content-between py-3 px-2 px-lg-3">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link link-light" href="#">icon <span>Home</span></a>
+                  <a class="nav-link link-light" href="#"><i class="bi bi-house-door-fill"></i> <span class="d-none d-lg-inline-block ms-2">Home</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link-light" href="#">icon <span>Stats</span></a>
+                  <a class="nav-link link-light" href="#"><i class="bi bi-bar-chart-fill"></i> <span class="d-none d-lg-inline-block ms-2">Stats</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link-light" href="#">icon <span>Signals</span></a>
+                  <a class="nav-link link-light" href="#"><i class="bi bi-reception-4"></i> <span class="d-none d-lg-inline-block ms-2">Signals</span></a>
                 </li>
             </ul>
-            <ul class="nav">
+            <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link link-light" href="#">icon <span>Admin</span></a>
+                    <a class="nav-link link-light" href="#"><i class="bi bi-gear-fill"></i> <span class="d-none d-lg-inline-block ms-2">Admin</span></a>
                 </li> 
             </div>  
         </aside>
 
         <div class="content overflow-y-auto">
-            <header class="py-3">
+            <header class="py-3 text-bg-primary">
                 <div class="container-fluid">
-                    <div class="row row-cols-1 row-cols-md-3 align-items-center">
+                    <div class="row row-cols-1 row-cols-md-3 align-items-start">
+                        <!-- new student -->
                         <div class="col order-md-3 col-lg-3">
                             <span>Nuovo Studente</span>
-                            <button class="btn text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus-square"></i></button>
-
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                mettere il form qui!
-                            </div>
+                            <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-plus-lg"></i></button>
+                            <!-- offcanvas -->
+                            <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                              <div class="offcanvas-header">
+                                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">State</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                                      <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                  </div>
+                                </form>
+                              </div>
                             </div>
                         </div>
-                        <div class="col flex-lg-grow-1 col-lg-6">
-                            <h1 class="d-inline-block">Boolean</h1> <span class="badge rounded-pill">Piano blaze</span>
-                            <nav style="--bs-breadcrumb-divider: '>>'; --bs-breadcrumb-divider-color: var(--bs-white)" aria-label="breadcrumb" class="text-white">
-                                <ol class="breadcrumb flex-nowrap">
+
+                        <!-- breadcrumb -->
+                        <div class="col col-lg-6">
+                            <h1 class="d-inline-block">Boolean</h1> <a href="#" class="badge rounded-pill">Piano blaze</a>
+                            <nav style="--bs-breadcrumb-divider: '»';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <span class="badge rounded-pill">3 app</span>
+                                        <a href="#" class="badge rounded-pill">3 app</a>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">
-                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile app</span>
-                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean web app</span>
-                                        <span class="badge rounded-pill d-none d-lg-inline-block">Boolean blog app</span>
-                                        <span class="badge rounded-pill d-lg-none">+</span>
+                                        <a href="#" class="badge rounded-pill d-none d-lg-inline-block">Boolean mobile app</a>
+                                        <a href="#" class="badge rounded-pill d-none d-lg-inline-block">Boolean web app</a>
+                                        <a href="#" class="badge rounded-pill d-none d-lg-inline-block">Boolean blog app</a>
+                                        <a href="#" class="badge rounded-pill d-lg-none">+</a>
                                     </li>
                                 </ol>
                               </nav>
                         </div>
+                        <!-- studenti online -->
                         <div class="col col-lg-3">
                             <p>
                                 Studenti online negli ultimi 30 minuti
                             </p>
-                            <span class="counter">
+                            <span class="counter fs-2">
                                 125
                             </span>
                         </div>
@@ -124,10 +176,10 @@
             <div class="container-fluid">
                 <div class="row">
 
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-8 col-xl-7">
                         <section id="next-class">
                             <ul class="list-group">
-                                <li class="list-group-item"><h2>SectionTitle</h2></li>
+                                <li class="list-group-item bg-secondary-subtle"><h2>Prossime classi</h2></li>
                                 <li class="list-group-item">
                                     <table class="table table-hover text-center">
                                         <thead>
@@ -141,13 +193,11 @@
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td scope="row"><img src="#" alt="Img"> Classe quiNumero!</td>
-                                            <td>quiData!</td>
+                                            <td scope="row">Classe 75</td>
+                                            <td>15 Febbraio 2021</td>
                                             <td>20%</td>
                                             <td>
-                                                <span class="badge rounded-pill bg-success">Done</span>
-                                                <span class="badge rounded-pill bg-warning">Process</span>
-                                                <span class="badge rounded-pill bg-danger">Failed</span>
+                                                <span class="badge rounded-2 bg-success">Done</span>
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
@@ -155,13 +205,88 @@
                                             </td>
                                           </tr>
                                           <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
+                                            <td scope="row">Classe 76</td>
+                                            <td>16 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-success">Done</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
                                           </tr>
                                           <tr>
-                                            <th scope="row">3</th>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
+                                            <td scope="row">Classe 77</td>
+                                            <td>17 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-warning">Process</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row">Classe 78</td>
+                                            <td>18 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-success">Done</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row">Classe 79</td>
+                                            <td>19 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-danger">Failed</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row">Classe 80</td>
+                                            <td>20 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-success">Done</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row">Classe 81</td>
+                                            <td>21 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-danger">Failed</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row">Classe 82</td>
+                                            <td>22 Febbraio 2021</td>
+                                            <td>20%</td>
+                                            <td>
+                                                <span class="badge rounded-2 bg-success">Done</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-fill"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-trash3-fill"></i></button> 
+                                            </td>
                                           </tr>
                                         </tbody>
                                       </table>
@@ -170,7 +295,7 @@
                         </section>
                         <section id="faq">
                             <ul class="list-group">
-                                <li class="list-group-item"><h2>SectionTitle</h2></li>
+                                <li class="list-group-item bg-secondary-subtle"><h2>F.A.Q.</h2></li>
                                 <li class="list-group-item">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
                                         <div class="accordion-item">
@@ -209,7 +334,7 @@
                         </section>
                     </div>
 
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 col-xl-5">
                         <section id="to-do">
                             <ul class="list-group">
                                 <li class="list-group-item"><h2>SectionTitle</h2></li>
